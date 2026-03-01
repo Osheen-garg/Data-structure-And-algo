@@ -37,31 +37,9 @@ int main(){
     return 0;
 }
 
-// Reverse a string
 
-// Check if string is palindrome
-
-// Check if two strings are anagram
-
-// Count frequency of characters
-
-// Find first non-repeating character
-
-// Remove duplicate characters
-
-// Convert lowercase to uppercase and vice versa
-
-// Count vowels and consonants
-
-// Check if string contains only digits
-
-// Find length of last word
-
-// Reverse words in a sentence
 
 // Check if one string is rotation of another
-
-// Remove all spaces from string
 
 // Print all substrings
 
