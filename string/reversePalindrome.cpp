@@ -39,7 +39,3 @@ int main(){
 
 
 
-
-
-// Print all substrings
-
