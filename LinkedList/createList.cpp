@@ -20,5 +20,6 @@ int main(){
     Node* y=new Node(arr[0]);
     cout<<y<<'\n';
     cout<<y->data<<'\n';
+    cout<<y->next;
     return 0;
 }
