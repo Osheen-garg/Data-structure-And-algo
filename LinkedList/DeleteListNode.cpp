@@ -47,10 +47,11 @@ Node * DeletePos(Node *head ,int pos){
     Node *temp=head;
     for(int i=1;i<pos-1 &&temp->next!=nullptr; i++){
         temp=temp->next;
-        if(temp->next==nullptr){
-            cout<<"Position is out of range";
-        }
     }
+     if(temp->next==nullptr){
+            cout<<"Position is out of range";
+            return head;
+        }
     Node *del =temp->next;
     temp->next=del->next;
     delete del;
@@ -69,5 +70,5 @@ newNode=DeletePos(newNode,3);
         cout << temp->data << " ";
         temp = temp->next;
     }
-    return 0;
+    return 0;  
 }

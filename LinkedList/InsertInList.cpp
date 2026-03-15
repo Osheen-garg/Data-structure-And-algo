@@ -50,6 +50,7 @@ Node* insertAtSpecific(Node* head ,int val,int pos){
        }
        newNode->next=temp->next;
        temp->next=newNode;
+       return head;
 }
 
 void printList(Node* head){
