@@ -26,7 +26,7 @@ vector<string> sol2(string s){
 }
 
 int main(){
-    string s="abc";
+    string s="aabcbaa";
        vector<string> ans=sol2(s);
 
        for(auto s:ans){

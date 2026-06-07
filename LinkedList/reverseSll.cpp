@@ -17,18 +17,30 @@ class Node{
 };
 
 Node * reverseList(Node *head){
-    Node* prev=NULL;
-    Node* curr=head;
-    Node* next;
+   Node* prev=nullptr;
+   Node* temp=head;
+   while(temp!=nullptr){
+    Node*front =temp->next;
+    temp->next=prev;
+    prev=temp;
+    temp=front;
 
-    while(curr!=NULL){
-        next=curr->next;
-        curr->next=prev;
-        prev=curr;
-        curr=next;
-    }
-    return prev;
+   }
+   return prev;
 }
+
+Node *recursiveReverseList(Node* head){
+    if (head == NULL || head->next == NULL)
+            return head;
+
+    Node* newhead=recursiveReverseList(head->next);
+    Node* front=head->next;
+    front->next=head;
+    head->next=nullptr;
+
+    return newhead;
+}
+
 void printList(Node* head){
     Node* temp=head;
     while(temp!=nullptr){
@@ -43,7 +55,7 @@ Node *newNode=new Node(3);
 newNode->next=new Node(4);
 newNode->next->next=new Node(5);
 newNode->next->next->next=new Node(6);
-Node* List=reverseList(newNode);
+Node* List=recursiveReverseList(newNode);
 printList(List);
     return 0;
 }
